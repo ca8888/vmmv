@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" ng-app="tempSystem">
+  <head>
+    <meta charset="utf-8">
+    <script src="angular.min.js"></script>
+    <script src="app1.js"> </script>
+    <title> Oculid temperture system </title>
+  </head>
+  <body>
+    <h1> welcome to oculid temperature system</h1>
+
+    <div ng-controller="tempReading">
+      <div>
+        please insert your desire room temperature:
+        <div>
+          <input type="text" ng-model="temperature" ng-blur = "upper();">
+          <!--you typed {{name}} onClick=publish() -->
+        </div>
+        <div>
+          <h2>please turn the heating to state :{{required_heating}}</h2>
+        </div>
+      </div>
+    </div>
+
+    <div ng-controller="DIC">
+      <div>
+        please insert your name:
+        <div>
+          <input type="text" ng-model="name" ng-blur = "upper();">
+          <!--you typed {{name}} onClick=publish() -->
+        </div>
+        <div>
+          <h2>please turn the heating to state :{{name}}</h2>
+        </div>
+      </div>
+    </div>
+
+    <div ng-controller="lec11">
+      <h3>
+        ---lec11---
+      </h3>
+      <div>
+        please insert your name:
+        {{myfun()}}
+      </div>
+      <div>
+        <button ng-click="button_call()">
+          pressMe
+        </button>
+        <!--<img src="image/{{state}}.png"> -->
+        <img ng-src="image/{{state}}.png">
+      </div>
+    </div>
+
+    <div ng-controller="lec14">
+      <h3>
+        ---lec14---
+      </h3>
+      <div>
+        <button ng-click="show()">
+          log
+        </button>
+      </div>
+      <div>
+        <button ng-click="up_counter()">
+          up_counter
+        </button>
+        regular counter: {{counter}}
+      </div>
+      <div>
+        <button ng-click="delay_counter()">
+          delay_counter
+        </button>
+        regular counter: {{counter}}
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </body>
+</html>

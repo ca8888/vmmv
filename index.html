@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html ng-app="app3">
+  <head>
+    <meta charset="utf-8">
+    <script src="angular.min.js"></script>
+    <script src="service.js"> </script>
+
+    <title> np-repeat </title>
+  </head>
+  <body>
+
+    <h1> coustom service </h1>
+
+    <div >
+      <h3>
+        ---lec20---
+      </h3>
+      <div ng-controller="AddItmeController as itemAdd">
+        <input type="text" ng-model=itemAdd.itemName placeholder="item name">
+        <input type="text" ng-model=itemAdd.itemNumber placeholder="item Number">
+        <button ng-click="itemAdd.addItem()"> add item to shoping </button>
+
+      <div ng-controller="ShowListController as showList">
+        <div>
+          <ol>
+            <li ng-repeat="item in showList.items">
+              {{item.name}} of {{item.number}}
+              <button ng-click="showList.remove_Item($index);"> remove item </button>
+            </li>
+          </ol>
+      </div>
+</html>

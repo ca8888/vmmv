@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="utf-8">
+    <script src="angular.min.js"></script>
+    <script src="app2.js"> </script>
+    <script src="inhiratence.js"> </script>
+
+    <title> np-repeat </title>
+  </head>
+  <body>
+
+    <h1> welcome </h1>
+    <div ng-app="repeatme" >
+      <div  ng-controller = "lec16">
+        <h3>
+          ---lec16---
+        </h3>
+        <div>
+          <ul>
+            <!--li ng-repeat="item in shop1 | filter: 'milk'"-->
+            <input type=text ng-model="search">
+            <li ng-repeat="item in shop1 | filter: search">
+              {{ item }}
+            </li>
+          </ul>
+        </div>
+        <div>
+          <input type="text" ng-model="shop2[0].quantity">
+          <ul>
+            <li ng-repeat="item in shop2">
+              {{$index + 1}}. buy {{ item.quantity }} of {{item.name}}
+             </li>
+          </ul>
+          <input type="text" ng-model="new_item_name" placeholder="item name">
+          <input type="text" ng-model="new_item_quantity" placeholder="item quantity">
+          <button ng-click="add_to_list()">
+            add to list
+          </button>
+        </div>
+        the word milk exsit only in the {{ resault }}
+         this is wird {{ bummer }}
+        </div>
+        <div ng-controller="lec19">
+          {{ try }}
+          alon
+          <div ng-controller="child">
+
+          </div>
+        </div>
+    </div>
+
+
+
+
+
+    <div ng-app="my_app">
+      <h3>
+        ---lec19---
+      </h3>
+      <div ng-controller="parent">
+        {{ parentValue }}
+        alon
+        <div ng-controller="child">
+
+        </div>
+      </div>
+    </div>
+
+
+  </body>
+</html>
